@@ -48,5 +48,4 @@ backToTopButton.addEventListener("click", () => {
     });
 });
 
-AOS.init();
 
