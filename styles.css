@@ -285,6 +285,31 @@ body {
   padding: 3% 0 2% 0;
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  z-index: 4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+#backToTop img {
+  width: 50px;
+  height: 50px;
+}
+
 @media not all and (max-width: 650px) {
   .open-menu,
   .close-menu {
@@ -464,7 +489,7 @@ body {
     padding: 1%;
     height: 100%;
     position: fixed;
-    z-index: 2;
+    z-index: 5;
 
     margin: 0;
     top: 0;

@@ -28,3 +28,25 @@ document.querySelector(".open-menu").onclick = function () {
 document.querySelector(".close-menu").onclick = function () {
     document.documentElement.classList.remove("active-menu")
 }
+
+const backToTopButton = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY >= 1000) {
+        backToTopButton.style.opacity = "1";
+        backToTopButton.style.visibility = "visible";
+    } else {
+        backToTopButton.style.opacity = "0";
+        backToTopButton.style.visibility = "hidden";
+    }
+});
+
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+AOS.init();
+
